@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SOC - Acesso</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .logo {
+    height: 300px; /* Altura grande, largura ajusta automaticamente */
+    width: auto;
+        }
+        h1 {
+            font-size: 3em;
+            margin: 10px 0;
+        }
+        .dica {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+        #senha {
+            padding: 10px;
+            font-size: 1em;
+            width: 200px;
+            text-align: center;
+            background: #111;
+            color: #fff;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <img src="LOGO_DO_SOC.png" alt="SOC Logo" class="logo"> <!-- Substitua pelo logo real -->
+    <h1>BEM-VINDO AO SOC</h1>
+    <p class="dica">Digite a senha para entrar<br>Dica: O que o SOC é?</p>
+    <input type="password" id="senha" placeholder="" autofocus>
+
+    <script>
+        const SENHA_CORRETA = "antianao"; // Troque pela senha que só vocês sabem!
+
+        document.getElementById("senha").addEventListener("input", function(e) {
+            if (e.target.value === SENHA_CORRETA) {
+                window.location.href = "login.html"; // Redireciona pra tela de login/cadastro
+            }
+        });
+    </script>
+</body>
+</html>
