@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SOC - Acesso</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <img src="img/soclogo.png" alt="SOC Logo" class="logo"> <!-- Substitua pelo logo real -->
+    <p class="dica">Digite a senha</p>
+    <input type="password" id="senha" placeholder="" autofocus>
+
+    <script>
+        const SENHA_CORRETA = "antianao"; // Troque pela senha que só vocês sabem!
+
+        document.addEventListener('keypress', function (e) { // Aceitar o input só quando der enter
+            if (e.key === "Enter") {
+                if (e.target.value === SENHA_CORRETA) {
+                    window.location.href = "login.html"; // Redireciona pra tela de login/cadastro
+                }
+            }
+        });
+    </script>
+</body>
+</html>
